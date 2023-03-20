@@ -6,13 +6,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'heroPattern': "url('/images/heroPattern.svg')",
+      },
       colors: {
         buttonBlue: '#0017EB',
-        buttonGray: '#BDCBD3'
+        buttonGray: '#BDCBD3',
+        headingBlue: '#0017EB'
       },
     },
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
+      poppinsLight: ['Poppins', 'sans-serif']
     }
   },
   plugins: [],

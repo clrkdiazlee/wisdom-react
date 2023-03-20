@@ -2,10 +2,10 @@ import React from 'react'
 
 function navbar() {
   return (
-    <div className='flex justify-between px-24'>
+    <div className='flex justify-between px-24 w-full shadow-md shadow-slate-200'>
       <div className='flex items-center'>
         <div className='pr-16 py-8'>
-          <img src="/images/logo_black.png" alt="Logo" className='w-32'/>
+          <img src="/images/logo_black.svg" alt="Logo" className='w-32'/>
         </div>
         <div className='flex text-sm font-poppins'>
           <ul className='flex space-x-11'>

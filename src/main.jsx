@@ -6,13 +6,13 @@ import {
 } from "react-router-dom"
 import './index.css'
 
-import Navbar from './components/Layouts/navbar'
-import Routes from './components/Routes/landing'
+import Navbar from './components/Layouts/Navbar'
+import Index from './components/Routes/Index'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Routes />,
+    element: <Index />,
   },
 ]);
 
