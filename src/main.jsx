@@ -7,6 +7,7 @@ import {
 import './index.css'
 
 import Navbar from './Layouts/Navbar'
+import Footer from '.Layouts/Footer'
 import Index from './Routes/Index'
 
 const router = createBrowserRouter([
@@ -20,6 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Navbar />
     <RouterProvider router={router} />
-
+    <Footer />
   </React.StrictMode>,
 )
