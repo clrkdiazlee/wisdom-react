@@ -7,7 +7,7 @@ import {
 import './index.css'
 
 import Navbar from './Layouts/Navbar'
-import Footer from '.Layouts/Footer'
+import Footer from './Layouts/Footer'
 import Index from './Routes/Index'
 
 const router = createBrowserRouter([

@@ -110,7 +110,7 @@ function Footer() {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="bg-text-[#122664] w-full text-center text-white font-poppinsLight text-sm py-1">
+      <div className="bg-[#122664] w-full text-center text-white font-poppinsLight text-sm py-1">
         © 2023 Wisdom. All Rights Reserved.
       </div>
 
