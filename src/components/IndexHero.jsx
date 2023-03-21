@@ -1,6 +1,61 @@
-import React from 'react'
+import React, {useState} from 'react'
+import IndexCategory from './IndexCategory'
 
 const IndexHero = () => {
+
+  const categories = [
+    {
+      icon: "/icons/iconMarketing.svg",
+      iconHover: "/icons/iconMarketingHover.png",
+      title: "Marketing & Communication",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconUI.png",
+      iconHover: "/icons/iconUIHover.svg",
+      title: "UI/UX Design",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconFinance.svg",
+      iconHover: "/icons/iconFinanceHover.png",
+      title: "Finance Management",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconWeb.svg",
+      iconHover: "/icons/iconWebHover.png",
+      title: "Web Development",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconProj.svg",
+      iconHover: "/icons/iconProjHover.png",
+      title: "Project Management",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconBusiness.svg",
+      iconHover: "/icons/iconBusinessHover.png",
+      title: "Business & Consulting",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconGraphic.svg",
+      iconHover: "/icons/iconGraphicHover.png",
+      title: "Graphic Designing",
+      jobs: "12 Jobs Available"
+    },
+    {
+      icon: "/icons/iconVideo.svg",
+      iconHover: "/icons/iconVideoHover.png",
+      title: "Video Editor",
+      jobs: "12 Jobs Available"
+    },
+  ]
+
+  const [categoryRender, setCategoryRender] = useState(0)
+
   return (
     <div className='bg-heroPattern'>
       <div className='flex flex-col justify-center items-center h-[42.6875rem]'>
@@ -25,108 +80,15 @@ const IndexHero = () => {
             Internship Opportunities
           </div>
         </div>
-        <div className='flex flex-wrap mt-16 font-poppins'>
-          <div className='flex px-7 py-8 items-center bg-blue-200 rounded-[2rem]'>
-            <div>
-              <img src="/images/iconMarketing.svg" alt="iconMarketing" className='w-12' />
-            </div>
-            <div className='pl-8'>
-              <div className='pb-2 text-lg font-bold'>
-                Marketing & <br />Communication
-              </div>
-              <div className='pt-2 text-sm'>
-                12 Jobs Available
-              </div>
-            </div>
-
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-          </div>
-          <div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+        <div> {/* CATEGORIES MAP */}
+        <div className='flex flex-wrap mt-16 font-poppins px-28 justify-between '>
+          {
+            categories.map(category => {
+            return (
+                <IndexCategory category={category}/>
+              )
+            })
+          }
           </div>
         </div>
       </div>
