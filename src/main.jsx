@@ -8,8 +8,8 @@ import './index.css'
 
 import Navbar from './Layouts/navbar'
 import Index from './Routes/Index'
-import Calendar from './Layouts/calendar'
-import Tasks from './Layouts/tasks'
+import Student from './Routes/Student'
+import Footer from './Layouts/Footer'
 
 const router = createBrowserRouter([
   {
@@ -17,12 +17,8 @@ const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: "/calendar",
-    element: <Calendar />,
-  },
-  {
-    path: "/tasks",
-    element: <Tasks />,
+    path: "/Student",
+    element: <Student />,
   },
 ]);
 

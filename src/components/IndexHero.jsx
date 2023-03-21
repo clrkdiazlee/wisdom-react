@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import IndexCategory from './IndexCategory'
+import { Link } from 'react-router-dom';
 
 const IndexHero = () => {
 
@@ -67,7 +68,7 @@ const IndexHero = () => {
         </div>
         <div className='mt-14'>
           <button className="font-poppins font-bold text-xl px-14 py-3 border bg-buttonBlue border-buttonBlue rounded-full text-white tracking-wide">
-            Join Now
+            <Link to="/Student">Join Now</Link>
           </button>
         </div>
       </div>
