@@ -6,14 +6,23 @@ import {
 } from "react-router-dom"
 import './index.css'
 
-import Navbar from './Layouts/Navbar'
-import Footer from './Layouts/Footer'
+import Navbar from './Layouts/navbar'
 import Index from './Routes/Index'
+import Calendar from './Layouts/calendar'
+import Tasks from './Layouts/tasks'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
+  },
+  {
+    path: "/calendar",
+    element: <Calendar />,
+  },
+  {
+    path: "/tasks",
+    element: <Tasks />,
   },
 ]);
 
