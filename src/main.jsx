@@ -6,8 +6,8 @@ import {
 } from "react-router-dom"
 import './index.css'
 
-import Navbar from './components/Layouts/Navbar'
-import Index from './components/Routes/Index'
+import Navbar from './Layouts/Navbar'
+import Index from './Routes/Index'
 
 const router = createBrowserRouter([
   {

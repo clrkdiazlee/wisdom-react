@@ -1,5 +1,5 @@
 import React from 'react'
-import IndexHero from '../Layouts/IndexHero'
+import IndexHero from '../components/IndexHero'
 
 const Index = () => {
   return (
