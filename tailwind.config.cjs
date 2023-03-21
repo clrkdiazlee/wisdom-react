@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         buttonBlue: '#0017EB',
         buttonGray: '#BDCBD3',
-        headingBlue: '#0017EB'
+        headingBlue: '#0017EB',
       },
     },
     fontFamily: {
