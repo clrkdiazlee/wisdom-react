@@ -68,7 +68,7 @@ const IndexHero = () => {
         </div>
         <div className='mt-14'>
           <button className="font-poppins font-bold text-xl px-14 py-3 border bg-buttonBlue border-buttonBlue rounded-full text-white tracking-wide">
-            <Link to="/Registration">Join Now</Link>
+            <Link to="/Student">Join Now</Link>
           </button>
         </div>
       </div>
