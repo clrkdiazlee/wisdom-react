@@ -6,9 +6,7 @@ import Registration from '../components/Registration'
 const Student = () => {
   return (
     <div>
-
         <Registration />
-
     </div>
   )
 }

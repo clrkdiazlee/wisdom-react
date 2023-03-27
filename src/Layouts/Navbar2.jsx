@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="flex justify-between px-24 w-full shadow-md shadow-slate-200 z-10">
+    <div className="flex justify-between px-24 w-full shadow-md shadow-slate-200">
       <div className="flex items-center">
         <div className="pr-16 py-8">
           <Link to="/">
@@ -47,22 +47,6 @@ function Navbar() {
               className="text-sm w-full py-2 pl-4 pr-4 text-black outline-none"
             />
           </form>
-        </div>
-        <div className="flex">
-          <div className="px-5">
-            <button className="bg-buttonBlue border border-buttonBlue font-bold py-2 px-4 rounded-full text-white font-poppins text-sm tracking-wider">
-              <Link to="/Registration">
-                Join Now
-              </Link>
-            </button>
-          </div>
-          <div>
-            <button className="font-bold py-2 px-4 border border-buttonBlue rounded-full text-buttonBlue font-poppins text-sm tracking-wide">
-              <Link to="/Login">
-                Log In
-              </Link>
-            </button>
-          </div>
         </div>
       </div>
     </div>

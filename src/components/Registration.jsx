@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Login from '../components/Login'
 
 
 const Registration = () => {
@@ -25,7 +24,7 @@ const Registration = () => {
     }
   };
   return (
-    <div className="flex flex-col lg:flex-row bg-gray-100 h-screen">
+    <div className="flex flex-col lg:flex-row h-screen z-0">
       <div
         className="bg-cover bg-center h-screen lg:h-auto lg:w-1/2"
         style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
