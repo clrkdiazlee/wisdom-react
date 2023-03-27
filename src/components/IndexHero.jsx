@@ -92,6 +92,11 @@ const IndexHero = () => {
           }
           </div>
         </div>
+        <div> {/* SLIDING */}
+          <div>
+            
+          </div>
+        </div>
       </div>
     </div>
   )
