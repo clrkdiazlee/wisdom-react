@@ -1,6 +1,6 @@
 import React from 'react'
 
-function navbar() {
+function Navbar() {
   return (
     <div className='flex justify-between px-24 w-full shadow-md shadow-slate-200'>
       <div className='flex items-center'>
@@ -56,4 +56,4 @@ function navbar() {
   )
 }
 
-export default navbar
+export default Navbar

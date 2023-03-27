@@ -1,6 +1,6 @@
 import React from 'react'
 
-const tasks = () => {
+const Tasks = () => {
   return (
     // ====================== MAIN CONTAINER AND BACKGROUND
     <div className="antialiased bg-slate-200 text-slate-700 mx-2 font-poppins">
@@ -95,4 +95,4 @@ const tasks = () => {
   )
 }
 
-export default tasks
+export default Tasks
