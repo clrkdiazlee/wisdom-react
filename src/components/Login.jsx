@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Login = () => {
 
@@ -22,7 +22,7 @@ const Login = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-24" onSubmit={handleSubmit}>
-        <h1 class="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
+        <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Login</h1>
           <div className="px-8 pb-8">
 
 
@@ -74,19 +74,20 @@ const Login = () => {
               className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
              type="submit"
             >
-              Register
+              Login
             </button>
 
             </div>
             <hr className=' my-3'></hr>
-
-            <p className="text-xs font-light text-center text-gray-700 font-poppins">
-          {" "}
-          Already have Account?{" "}
-          <a href="#" className="font-medium text-buttonBlue hover:underline">
-           Login
-          </a>
-        </p>
+            <Link to="/Registration">    
+	            <p className="text-xs font-light text-center text-gray-700 font-poppins">
+               {" "}
+                Don't have an account?{" "}
+                <a className="font-medium text-buttonBlue hover:underline">
+                Create an account
+                </a>
+               </p>
+	          </Link>
           </div>
         </form> 
       </div>

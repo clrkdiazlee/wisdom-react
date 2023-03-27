@@ -1,9 +1,10 @@
 import React from 'react'
 import Navbar from './Layouts/Navbar'
 import Index from './Routes/Index'
-import Student from './Routes/Student'
 import Footer from './Layouts/Footer'
 import { Route, Routes } from 'react-router-dom'
+import Login from './components/Login'
+import Registration from './components/Registration'
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
         <Navbar />
             <Routes>
                 <Route path='/' element={<Index />} />
-                <Route path='/Student' element={<Student />} />
+                <Route path='/Registration' element={<Registration />} />
+                <Route path='/Login' element={<Login />} />
             </Routes>
         <Footer />
     </div>

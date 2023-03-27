@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Login from '../components/Login'
+
 
 const Registration = () => {
   const [schoolName, setSchoolName] = useState("");
@@ -29,7 +32,7 @@ const Registration = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-4" onSubmit={handleSubmit}>
-        <h1 class="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
+        <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
           <div className="px-8 pb-8">
 
             {/* SCHOOL NAME */}
@@ -229,13 +232,15 @@ const Registration = () => {
             </div>
             <hr className=' my-3'></hr>
 
-            <p className="text-xs font-light text-center text-gray-700 font-poppins">
-          {" "}
-          Already have Account?{" "}
-          <a href="#" className="font-medium text-buttonBlue hover:underline">
-           Login
-          </a>
-        </p>
+            <Link to="/Login">    
+	            <p className="text-xs font-light text-center text-gray-700 font-poppins">
+               {" "}
+                Already have Account?{" "}
+                <a className="font-medium text-buttonBlue hover:underline">
+                Login
+                </a>
+               </p>
+	          </Link>
           </div>
         </form> 
       </div>
