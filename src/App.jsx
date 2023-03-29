@@ -6,6 +6,8 @@ import Footer from './Layouts/Footer'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Login from './components/Login'
 import Registration from './components/Registration'
+import ForgotPassword from './components/ForgotPassword'
+import ConfirmPassword from './components/ConfirmPassword'
 
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
             <Route path='/' element={<Index />} />
             <Route path='/Registration' element={<Registration />} />
             <Route path='/Login' element={<Login />} />
+            <Route path='/ForgotPassword' element={<ForgotPassword />} />
+            <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
           </Routes>
           <Footer />
         </>
@@ -31,6 +35,8 @@ const App = () => {
             <Route path='/' element={<Index />} />
             <Route path='/Registration' element={<Registration />} />
             <Route path='/Login' element={<Login />} />
+            <Route path='/ForgotPassword' element={<ForgotPassword />} />
+            <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
           </Routes>
           <Footer />
         </>

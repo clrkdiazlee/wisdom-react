@@ -79,6 +79,16 @@ const Login = () => {
 
             </div>
             <hr className=' my-3'></hr>
+            
+            <Link to="/ForgotPassword">    
+	            <p className="text-xs font-light text-center text-gray-700 font-poppins">
+               {" "}
+                <a className="font-medium text-buttonBlue hover:underline">
+                Forgot Password
+                </a>
+               </p>
+	          </Link>
+
             <Link to="/Registration">    
 	            <p className="text-xs font-light text-center text-gray-700 font-poppins">
                {" "}
@@ -88,6 +98,7 @@ const Login = () => {
                 </a>
                </p>
 	          </Link>
+
           </div>
         </form> 
       </div>
