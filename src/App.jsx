@@ -8,6 +8,7 @@ import Login from './components/Login'
 import Registration from './components/Registration'
 import ForgotPassword from './components/ForgotPassword'
 import ConfirmPassword from './components/ConfirmPassword'
+import SchoolApplication from './components/SchoolApplication'
 
 
 const App = () => {

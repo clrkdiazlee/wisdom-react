@@ -31,11 +31,11 @@ const Registration = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-4" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
+          <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
           <div className="px-8 pb-8">
 
             {/* SCHOOL NAME */}
-          <div className="mb-4">
+            <div className="mb-4">
               <label
                 className="block text-gray-700 text-xs font-bold mb-2 font-poppins"
                 htmlFor="school-name"
@@ -128,8 +128,8 @@ const Registration = () => {
                 }}
               />
             </div>
-            
-            
+
+
             {/* 2 COLUMN */}
             <div className="mb-4 flex">
               {/* PASSWORD */}
@@ -169,10 +169,10 @@ const Registration = () => {
                   required
                 />
               </div>
-              
+
             </div>
-            
-                {/* 2 COLUMN */}
+
+            {/* 2 COLUMN */}
             <div className="mb-4 flex">
               {/* CITY */}
               <div className="w-1/2 mr-2">
@@ -183,8 +183,8 @@ const Registration = () => {
                   City
                 </label>
                 <select
-                className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                value={city} onChange={(e) => setCity(e.target.value)} required>
+                  className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  value={city} onChange={(e) => setCity(e.target.value)} required>
                   <option value="">Select City</option>
                   <option value="Manila">Manila</option>
                   <option value="Quezon City">Quezon City</option>
@@ -212,36 +212,36 @@ const Registration = () => {
                   <option value="Davao del Sur">Davao del Sur</option>
                 </select>
               </div>
-              
+
             </div>
 
 
 
-            
+
 
             {/* BUTTON */}
             <div className="flex items-center justify-between">
-            <button
-              className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
-             type="submit"
-            >
-              Register
-            </button>
+              <button
+                className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
+                type="submit"
+              >
+                Register
+              </button>
 
             </div>
             <hr className=' my-3'></hr>
 
-            <Link to="/Login">    
-	            <p className="text-xs font-light text-center text-gray-700 font-poppins">
-               {" "}
+            <Link to="/Login">
+              <p className="text-xs font-light text-center text-gray-700 font-poppins">
+                {" "}
                 Already have Account?{" "}
                 <a className="font-medium text-buttonBlue hover:underline">
-                Login
+                  Login
                 </a>
-               </p>
-	          </Link>
+              </p>
+            </Link>
           </div>
-        </form> 
+        </form>
       </div>
     </div>
   );

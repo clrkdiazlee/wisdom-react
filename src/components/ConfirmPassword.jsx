@@ -26,65 +26,65 @@ const ConfirmPassword = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-24" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Reset Account Password</h1>
+          <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Reset Account Password</h1>
           <div className="px-8 pb-8">
 
 
             {/* NEW PASSWORD */}
             <div className="mb-4">
-            <label
-                  className="block text-gray-700 text-xs font-bold mb-2 font-poppins"
-                  htmlFor="newPassword"
-                >
-                  New Password
-                </label>
-                <input
-                  className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="newPassword"
-                  type="newPassword"
-                  placeholder="Enter your password"
-                  value={newPassword}
-                  onChange={(event) => setnewPassword(event.target.value)}
-                  required
-                />
+              <label
+                className="block text-gray-700 text-xs font-bold mb-2 font-poppins"
+                htmlFor="newPassword"
+              >
+                New Password
+              </label>
+              <input
+                className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="newPassword"
+                type="newPassword"
+                placeholder="Enter your password"
+                value={newPassword}
+                onChange={(event) => setnewPassword(event.target.value)}
+                required
+              />
             </div>
 
-            
+
             {/* CONFIRM PASSWORD */}
             <div className="mb-4">
-            <label
-                  className="block text-gray-700 text-xs font-bold mb-2 font-poppins"
-                  htmlFor="confirmNewPassword"
-                >
-                  Confirm Password
-                </label>
-                <input
-                  className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="confirmNewPassword"
-                  type="confirmNewPassword"
-                  placeholder="Confirm New Password"
-                  value={confirmNewPassword}
-                  onChange={(event) => setconfirmNewPassword(event.target.value)}
-                  required
-                />
+              <label
+                className="block text-gray-700 text-xs font-bold mb-2 font-poppins"
+                htmlFor="confirmNewPassword"
+              >
+                Confirm Password
+              </label>
+              <input
+                className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="confirmNewPassword"
+                type="confirmNewPassword"
+                placeholder="Confirm New Password"
+                value={confirmNewPassword}
+                onChange={(event) => setconfirmNewPassword(event.target.value)}
+                required
+              />
             </div>
-            
 
-            
+
+
 
             {/* BUTTON */}
             <div className="flex items-center justify-between">
-            <button
-              className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
-             type="submit"
-            >
-              Confirm
-            </button>
+              <button
+                className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
+                type="submit"
+              >
+                Confirm
+              </button>
 
             </div>
-    
+
           </div>
-        </form> 
+        </form>
       </div>
     </div>
   );

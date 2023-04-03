@@ -10,7 +10,7 @@ const ForgotPassword = () => {
     event.preventDefault();
     if (!accountRecovery) {
       alert("Please fill all the required fields");
-    
+
     }
   };
   return (
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-24" onSubmit={handleSubmit}>
-        <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Forgot Your Password?</h1>
+          <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Forgot Your Password?</h1>
           <div className="px-8 pb-8">
 
 
@@ -43,21 +43,21 @@ const ForgotPassword = () => {
                 required
               />
             </div>
-            
+
 
             {/* BUTTON */}
             <div className="flex items-center justify-between">
-            <Link to="/ConfirmPassword">
-            <button
-              className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
-             type="submit"
-            >
-              Continue
-            </button>
-            </Link>
+              <Link to="/ConfirmPassword">
+                <button
+                  className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Continue
+                </button>
+              </Link>
             </div>
           </div>
-        </form> 
+        </form>
       </div>
     </div>
   );
