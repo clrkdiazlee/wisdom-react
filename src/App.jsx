@@ -28,6 +28,7 @@ const App = () => {
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
+            <Route path='/SchoolApplication' element={<SchoolApplication />} />
           </Routes>
           <Footer />
         </>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AboutBlack = () => {
+const AboutDesc = () => {
     return (
         <div>
             <div className='bg-aboutBg w-full h-[71.68rem] bg-cover'>
@@ -17,4 +17,4 @@ const AboutBlack = () => {
     )
 }
 
-export default AboutBlack
+export default AboutDesc
