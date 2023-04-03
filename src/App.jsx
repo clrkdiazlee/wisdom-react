@@ -9,6 +9,7 @@ import Registration from './components/Registration'
 import ForgotPassword from './components/ForgotPassword'
 import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
+import SchoolApplication from './components/SchoolApplication'
 
 
 const App = () => {
