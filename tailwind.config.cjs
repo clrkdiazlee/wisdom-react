@@ -8,6 +8,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         'heroPattern': "url('/images/heroPattern.svg')",
+        'aboutBg': "url('/images/aboutBg.svg')",
+        'aboutBgWhite': "url('/images/aboutBgWhite.svg')",
       },
       colors: {
         buttonBlue: '#0017EB',

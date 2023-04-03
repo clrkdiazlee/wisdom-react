@@ -8,6 +8,7 @@ import Login from './components/Login'
 import Registration from './components/Registration'
 import ForgotPassword from './components/ForgotPassword'
 import ConfirmPassword from './components/ConfirmPassword'
+import About from './Routes/About'
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
   console.log(currentPath)
   return (
     <div>
-      {currentPath == "/" ? (
+      {(currentPath == "/" || currentPath == "/About") ? (
         <>
           <Navbar />
           <Routes>
@@ -25,6 +26,7 @@ const App = () => {
             <Route path='/Login' element={<Login />} />
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
+            <Route path='/About' element={<About />} />
           </Routes>
           <Footer />
         </>
@@ -37,10 +39,11 @@ const App = () => {
             <Route path='/Login' element={<Login />} />
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
+            <Route path='/About' element={<About />} />
           </Routes>
           <Footer />
         </>
-      )         
+      )
       };
     </div>
   );

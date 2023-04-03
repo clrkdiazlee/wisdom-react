@@ -82,7 +82,7 @@ const IndexHero = () => {
           </div>
         </div>
         <div> {/* CATEGORIES MAP */}
-        <div className='flex flex-wrap mt-16 font-poppins px-28 justify-between '>
+        <div className='flex flex-wrap mt-16 font-poppins px-28 justify-center'>
           {
             categories.map(category => {
             return (

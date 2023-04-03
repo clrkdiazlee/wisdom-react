@@ -13,7 +13,9 @@ function Navbar() {
         <div className="flex text-sm font-poppins">
           <ul className="flex space-x-11">
             <li>
-              <a href="#">About</a>
+              <Link to="/About">
+                About
+              </Link> 
             </li>
             <li>
               <a href="#">Categories</a>
