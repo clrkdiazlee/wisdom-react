@@ -15,7 +15,7 @@ function Footer() {
                     />
             </div>
 
-            <div className="w-80">
+            <div className="w-80 text-sm">
               {/* DESCRIPTION */}
               FortWorth Inc. (PCMed - Technokids Philippines) is a premier I.T.
               company in the country specializing in I.T. solutions and providing
@@ -50,7 +50,7 @@ function Footer() {
           <div className="grid grid-cols-2 gap-8 md:gap-80 px-5 pt-10 md:pt-0 ">
             {/* OUR COMPANY */}
             <div>
-              <h2 className="mb-3 md:mb-6 text-lg font-semibold text-white">
+              <h2 className="mb-3 md:mb-6 text-md font-semibold text-white">
                 Our Company
               </h2>
               <ul className="text-white text-sm">
@@ -112,11 +112,9 @@ function Footer() {
       {/* COPYRIGHT */}
       <div className="bg-[#122664] w-full text-center text-white font-poppinsLight text-sm py-1">
         © 2023 Wisdom. All Rights Reserved.
-      </div>
-
-      
+      </div>    
     </div>
-  );
+  )
 }
 
 export default Footer;

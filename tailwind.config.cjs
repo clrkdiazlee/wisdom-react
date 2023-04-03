@@ -20,7 +20,13 @@ module.exports = {
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
       poppinsLight: ['Poppins', 'sans-serif']
-    }
+    },
+    variants: {
+      width: ["responsive", "hover", "focus"],
+      height: ["responsive", "hover", "focus"],
+      visibility: ['hover', 'focus'],
+    },
+
   },
   plugins: [],
 }

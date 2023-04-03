@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import IndexCategory from './IndexCategory'
 import { Link } from 'react-router-dom';
+import IndexCarousel from './IndexCarousel'
 
 const IndexHero = () => {
 
@@ -93,6 +94,14 @@ const IndexHero = () => {
           </div>
         </div>
       </div>
+
+      {/* CAROUSEL */}
+      <div>
+        <div className="2xl:container 2xl:mx-auto 2xl:px-0 py-3 md:px-[7rem] px-5">
+          <IndexCarousel />
+        </div>
+      </div>
+
     </div>
   )
 }
