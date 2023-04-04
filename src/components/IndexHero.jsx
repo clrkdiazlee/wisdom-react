@@ -53,6 +53,56 @@ const categories = [
     jobs: "12 Jobs Available"
   },
 ]
+const categories = [
+  {
+    icon: "/icons/iconMarketing.svg",
+    iconHover: "/icons/iconMarketingHover.png",
+    title: "Marketing & Communication",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconUI.png",
+    iconHover: "/icons/iconUIHover.svg",
+    title: "UI/UX Design",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconFinance.svg",
+    iconHover: "/icons/iconFinanceHover.png",
+    title: "Finance Management",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconWeb.svg",
+    iconHover: "/icons/iconWebHover.png",
+    title: "Web Development",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconProj.svg",
+    iconHover: "/icons/iconProjHover.png",
+    title: "Project Management",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconBusiness.svg",
+    iconHover: "/icons/iconBusinessHover.png",
+    title: "Business & Consulting",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconGraphic.svg",
+    iconHover: "/icons/iconGraphicHover.png",
+    title: "Graphic Designing",
+    jobs: "12 Jobs Available"
+  },
+  {
+    icon: "/icons/iconVideo.svg",
+    iconHover: "/icons/iconVideoHover.png",
+    title: "Video Editor",
+    jobs: "12 Jobs Available"
+  },
+]
 const IndexHero = () => {
 
 
