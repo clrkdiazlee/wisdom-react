@@ -58,40 +58,42 @@ const IndexHero = () => {
 
 
   return (
-    <div className='bg-heroPattern'>
-      <div className='flex flex-col h-screen justify-center'>
-        <div className='flex flex-col items-center'>
-          <div className='font-poppins font-bold text-[5rem] text-center px-[20rem] leading-tight'>
-            Find the internship of your <span className='text-headingBlue'>Dreams</span>
-          </div>
-          <div className='font-poppinsLight font-thin text-center px-[30rem] mt-8'>
-            Discover your ideal internship and work with professionals. Explore opportunities that fit your goals today!
-          </div>
-          <div className='mt-14'>
-            <button className="font-poppins font-bold text-xl px-14 py-3 border bg-buttonBlue border-buttonBlue rounded-full text-white tracking-wide">
-              <Link to="/Registration">Join Now</Link>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div> {/* HEADING */}
-          <div className='font-poppins font-medium text-[1.4rem] text-headingBlue text-center leading-tight mt-28'>
-            Choose Categories
-          </div>
-          <div className='font-poppins font-bold text-[2.7rem] text-center leading-tight mt-2'>
-            Internship Opportunities
+    <div >
+      <div className='bg-heroPattern bg-cover'>
+        <div className='flex flex-col h-full justify-center py-32'>
+          <div className='flex flex-col items-center'>
+            <div className='font-poppins font-bold text-[5rem] text-center px-[20rem] leading-tight'>
+              Find the internship of your <span className='text-headingBlue'>Dreams</span>
+            </div>
+            <div className='font-poppinsLight font-thin text-center px-[30rem] mt-8'>
+              Discover your ideal internship and work with professionals. Explore opportunities that fit your goals today!
+            </div>
+            <div className='mt-14'>
+              <button className="font-poppins font-bold text-xl px-14 py-3 border bg-buttonBlue border-buttonBlue rounded-full text-white tracking-wide">
+                <Link to="/Registration">Join Now</Link>
+              </button>
+            </div>
           </div>
         </div>
-        <div> {/* CATEGORIES MAP */}
-          <div className='flex flex-wrap mt-16 font-poppins px-28 justify-center'>
-            {
-              categories.map((category, index) => {
-                return (
-                  <IndexCategory category={category} key={index} />
-                )
-              })
-            }
+        <div>
+          <div> {/* HEADING */}
+            <div className='font-poppins font-medium text-[1.4rem] text-headingBlue text-center leading-tight mt-28'>
+              Choose Categories
+            </div>
+            <div className='font-poppins font-bold text-[2.7rem] text-center leading-tight mt-2'>
+              Internship Opportunities
+            </div>
+          </div>
+          <div> {/* CATEGORIES MAP */}
+            <div className='flex flex-wrap mt-16 font-poppins px-28 justify-center'>
+              {
+                categories.map((category, index) => {
+                  return (
+                    <IndexCategory category={category} key={index} />
+                  )
+                })
+              }
+            </div>
           </div>
         </div>
       </div>
