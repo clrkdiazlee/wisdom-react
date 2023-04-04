@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from './Layouts/Navbar'
 import Navbar2 from './Layouts/Navbar2'
 import Index from './Routes/Index'
@@ -10,12 +10,12 @@ import ForgotPassword from './components/ForgotPassword'
 import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
-
+import Protected from './components/Protected'
 
 const App = () => {
   const location = useLocation();
   const currentPath = location.pathname.toString();
-  console.log(currentPath)
+  
   return (
     <div>
       {(currentPath == "/" || currentPath == "/About") ? (
@@ -28,7 +28,14 @@ const App = () => {
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
-            <Route path='/SchoolApplication' element={<SchoolApplication />} />
+            <Route
+            path="/SchoolApplication"
+            element={
+              <Protected isSignedIn={localStorage.getItem("default-token")}>
+                <SchoolApplication />
+              </Protected>
+            }
+          />
           </Routes>
           <Footer />
         </>
@@ -38,10 +45,18 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Index />} />
             <Route path='/Registration' element={<Registration />} />
-            <Route path='/Login' element={<Login />} />
+            <Route path="/Login" element={<Login />}/>
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
+            <Route
+            path="/SchoolApplication"
+            element={
+              <Protected isSignedIn={localStorage.getItem("default-token")}>
+                <SchoolApplication />
+              </Protected>
+            }
+          />
           </Routes>
           <Footer />
         </>

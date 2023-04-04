@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-function Registration() {
+const Registration = () => {
   const submitForm = (e) => {
     e.preventDefault();
     if (!schoolName || !email || !password || !confirmPassword || !studentAddress || !contactNumber) {
@@ -42,7 +42,6 @@ function Registration() {
         })
         .catch((error) => {
           console.log(error);
-          console.log(schoolName, email, password)
       })
   };
 

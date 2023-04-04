@@ -1,19 +1,37 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (!email || !password) {
       alert("Please fill all the required fields");
+    };
 
+    axios
+      .post(`/login`, {
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        let token = res.data.token
+        axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+        localStorage.setItem('default-token', token);
+        console.log(res.data)
+        navigate("/SchoolApplication")
+      })
+      .catch((error) => {
+        axios.defaults.headers.common['Authorization'] = ""
+        localStorage.removeItem('default-token')
+        console.log(error);
+      })
     }
-  };
+
   return (
     <div className="flex flex-col lg:flex-row bg-gray-100 h-screen">
       <div
@@ -64,9 +82,6 @@ const Login = () => {
                 required
               />
             </div>
-
-
-
 
             {/* BUTTON */}
             <div className="flex items-center justify-between">
