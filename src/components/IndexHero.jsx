@@ -85,9 +85,9 @@ const IndexHero = () => {
         <div> {/* CATEGORIES MAP */}
         <div className='flex flex-wrap mt-16 font-poppins px-28 justify-center'>
           {
-            categories.map(category => {
+            categories.map((category, index) => {
             return (
-                <IndexCategory category={category}/>
+                <IndexCategory key={index} category={category}/>
               )
             })
           }

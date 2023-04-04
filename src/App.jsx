@@ -46,7 +46,7 @@ const App = () => {
           <Footer />
         </>
       )
-      };
+      }
     </div>
   );
 }

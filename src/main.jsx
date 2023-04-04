@@ -1,6 +1,8 @@
 import React from 'react'
 import App from './App'
 import ReactDOM from 'react-dom/client'
+import './apihandler'
+
 import {
   BrowserRouter,
   createBrowserRouter,
@@ -8,8 +10,6 @@ import {
 } from "react-router-dom"
 import './index.css'
 
-import Navbar from './Layouts/Navbar'
-import Footer from './Layouts/Footer'
 import Index from './Routes/Index'
 import SchoolAddStudent from './components/SchoolAddStudent'
 

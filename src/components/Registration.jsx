@@ -1,8 +1,45 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
+function Registration() {
+  const submitForm = (e) => {
+    e.preventDefault();
 
-const Registration = () => {
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return
+    }
+
+    axios
+      .post(`/register`, {
+        name: schoolName,
+        email: email,
+        password: password,
+      })
+
+      .then((res) => {
+        axios
+          .post(`/register`, {
+            address: studentAddress,
+            contact_number: contactNumber,
+            city: city,
+            province: province,
+            user_id: res.data.id
+          })
+          .then((res) => {
+            console.log(res.data)
+          })
+          .catch((error) => {
+            console.log(error);
+          })
+      })
+
+      .catch((error) => {
+        console.log(error);
+      })
+  };
+
   const [schoolName, setSchoolName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +67,7 @@ const Registration = () => {
         style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
-        <form className="w-full px-4" onSubmit={handleSubmit}>
+        <form className="w-full px-4" onSubmit={submitForm}>
           <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
           <div className="px-8 pb-8">
 
@@ -104,7 +141,7 @@ const Registration = () => {
                 className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="contactNumber"
                 pattern="[0-9]*"
-                inputmode="numeric"
+                inputMode="numeric"
                 placeholder="Enter your contact number"
                 value={contactNumber}
                 maxLength={11}
@@ -235,9 +272,9 @@ const Registration = () => {
               <p className="text-xs font-light text-center text-gray-700 font-poppins">
                 {" "}
                 Already have Account?{" "}
-                <a className="font-medium text-buttonBlue hover:underline">
+                <span className="font-medium text-buttonBlue hover:underline">
                   Login
-                </a>
+                </span>
               </p>
             </Link>
           </div>
