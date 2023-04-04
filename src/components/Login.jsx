@@ -83,9 +83,9 @@ const Login = () => {
             <Link to="/ForgotPassword">
               <p className="text-xs font-light text-center text-gray-700 font-poppins">
                 {" "}
-                <a className="font-medium text-buttonBlue hover:underline">
+                <span className="font-medium text-buttonBlue hover:underline">
                   Forgot Password
-                </a>
+                </span>
               </p>
             </Link>
 
@@ -93,9 +93,9 @@ const Login = () => {
               <p className="text-xs font-light text-center text-gray-700 font-poppins">
                 {" "}
                 Don't have an account?{" "}
-                <a className="font-medium text-buttonBlue hover:underline">
+                <span className="font-medium text-buttonBlue hover:underline">
                   Create an account
-                </a>
+                </span>
               </p>
             </Link>
 

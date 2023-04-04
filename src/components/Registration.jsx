@@ -5,6 +5,12 @@ import axios from "axios";
 function Registration() {
   const submitForm = (e) => {
     e.preventDefault();
+    if (!schoolName || !email || !password || !confirmPassword || !studentAddress || !contactNumber) {
+      alert("Please fill all the required fields");
+    } else {
+      // Do something with the form data
+      console.log("Form submitted");
+    }
 
     if (password !== confirmPassword) {
       alert("Passwords do not match");
@@ -20,7 +26,7 @@ function Registration() {
 
       .then((res) => {
         axios
-          .post(`/register`, {
+          .post(`/school-information`, {
             address: studentAddress,
             contact_number: contactNumber,
             city: city,
@@ -33,10 +39,10 @@ function Registration() {
           .catch((error) => {
             console.log(error);
           })
-      })
-
-      .catch((error) => {
-        console.log(error);
+        })
+        .catch((error) => {
+          console.log(error);
+          console.log(schoolName, email, password)
       })
   };
 
@@ -49,17 +55,6 @@ function Registration() {
   const [city, setCity] = useState("");
   const [province, setProvince] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!schoolName || !email || !password || !confirmPassword || !studentAddress || !contactNumber) {
-      alert("Please fill all the required fields");
-    } else if (password !== confirmPassword) {
-      alert("Passwords do not match");
-    } else {
-      // Do something with the form data
-      console.log("Form submitted");
-    }
-  };
   return (
     <div className="flex flex-col lg:flex-row h-screen z-0">
       <div

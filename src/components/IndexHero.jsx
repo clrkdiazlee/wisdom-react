@@ -1,9 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import IndexCategory from './IndexCategory'
 import { Link } from 'react-router-dom';
 import IndexCarousel from './IndexCarousel'
-
-const IndexHero = () => {
 
   const categories = [
     {
@@ -55,8 +53,9 @@ const IndexHero = () => {
       jobs: "12 Jobs Available"
     },
   ]
+const IndexHero = () => {
 
-  const [categoryRender, setCategoryRender] = useState(0)
+
 
   return (
     <div className='bg-heroPattern'>
@@ -87,7 +86,7 @@ const IndexHero = () => {
           {
             categories.map((category, index) => {
             return (
-                <IndexCategory key={index} category={category}/>
+                <IndexCategory category={category} key={index}/>
               )
             })
           }
@@ -101,7 +100,6 @@ const IndexHero = () => {
           <IndexCarousel />
         </div>
       </div>
-
     </div>
   )
 }

@@ -50,14 +50,12 @@ const AboutTestimonies = () => {
 
           <div>
             {
-              [...Array(10).keys()].map((id, index) => {
+              [...Array(10).keys()].map((id) => {
                 return (
-                  <div>
-                  <SwiperSlide key={index} className="!w-[89rem] backdrop-blur-[0.15rem]">
+                  <SwiperSlide key={id} className="!w-[89rem] backdrop-blur-[0.15rem]">
                     <AboutSlider testimonies={testimonies} />
                   </SwiperSlide>
-                  </div>
-                )
+                ) 
               })
             }
           </div>

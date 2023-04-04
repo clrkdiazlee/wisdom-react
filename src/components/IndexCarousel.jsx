@@ -37,9 +37,8 @@ const Test = () => {
             className="carousel-container float-left relative flex overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0">
             {data.resources.map((resource, index) => {
               return (
-              <SwiperSlide>  
+              <SwiperSlide key={index}>  
                 <div
-                  key={index}
                   className="carousel-item text-center relative w-40 h-80 snap-start 
                   flex-initial -skew-x-[20deg]
                   whitespace-nowrap hover:w-96 transition-all duration-300  ease-in-out overflow-hidden"
