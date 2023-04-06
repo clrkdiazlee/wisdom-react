@@ -15,6 +15,7 @@ import StudentProfile from './components/StudentProfile'
 import StudentUploadRequirements from './components/StudentUploadRequirements'
 
 import Protected from './components/Protected'
+import StudentProfile from './components/StudentProfile'
 
 const App = () => {
   const location = useLocation();
@@ -63,6 +64,15 @@ const App = () => {
             }
           />
             <Route path='/StudentUploadRequirements' element={<StudentUploadRequirements />} />
+            <Route path='/StudentProfile' element={<StudentProfile />} />
+            <Route
+            path="/SchoolApplication"
+            element={
+              <Protected isSignedIn={localStorage.getItem("default-token")}>
+                <SchoolApplication />
+              </Protected>
+            }
+          />
           </Routes>
           <Footer />
         </>
