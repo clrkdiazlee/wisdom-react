@@ -13,7 +13,6 @@ import SchoolApplication from './components/SchoolApplication'
 import Protected from './components/Protected'
 import StudentProfile from './components/StudentProfile'
 import StudentUploadRequirements from './components/StudentUploadRequirements'
-
 import Protected from './components/Protected'
 import StudentProfile from './components/StudentProfile'
 
