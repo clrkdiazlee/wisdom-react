@@ -12,6 +12,8 @@ import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
 import Protected from './components/Protected'
 import StudentProfile from './components/StudentProfile'
+import StudentUploadRequirements from './components/StudentUploadRequirements'
+
 
 const App = () => {
   const location = useLocation();
@@ -59,6 +61,7 @@ const App = () => {
               </Protected>
             }
           />
+            <Route path='/StudentUploadRequirements' element={<StudentUploadRequirements />} />
           </Routes>
           <Footer />
         </>
