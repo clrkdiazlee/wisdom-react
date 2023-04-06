@@ -11,6 +11,7 @@ import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
 import Protected from './components/Protected'
+import StudentProfile from './components/StudentProfile'
 
 const App = () => {
   const location = useLocation();
@@ -49,6 +50,7 @@ const App = () => {
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
+            <Route path='/StudentProfile' element={<StudentProfile />} />
             <Route
             path="/SchoolApplication"
             element={
