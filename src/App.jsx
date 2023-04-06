@@ -10,6 +10,7 @@ import ForgotPassword from './components/ForgotPassword'
 import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
+import StudentUploadRequirements from './components/StudentUploadRequirements'
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
             <Route path='/ForgotPassword' element={<ForgotPassword />} />
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
+            <Route path='/StudentUploadRequirements' element={<StudentUploadRequirements />} />
           </Routes>
           <Footer />
         </>
