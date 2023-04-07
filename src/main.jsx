@@ -11,16 +11,11 @@ import {
 import './index.css'
 
 import Index from './Routes/Index'
-import SchoolAddStudent from './components/SchoolAddStudent'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Index />,
-  },
-  {
-    path: "/school/add-student",
-    element: <SchoolAddStudent />,
   },
 
 ]);
