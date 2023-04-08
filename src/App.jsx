@@ -14,6 +14,7 @@ import Protected from './components/Protected'
 import StudentUploadRequirements from './components/StudentUploadRequirements'
 import StudentProfile from './components/StudentProfile'
 import Calendar from './components/Calendar'
+import SchoolAddStudent from './components/SchoolAddStudent'
 
 const App = () => {
   const location = useLocation();
@@ -72,6 +73,9 @@ const App = () => {
               </Protected>
             }
           />
+
+            <Route path='/add-student' element={<SchoolAddStudent />} />
+
           </Routes>
           <Footer />
         </>
