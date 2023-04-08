@@ -11,7 +11,9 @@ import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
 import Protected from './components/Protected'
+import StudentUploadRequirements from './components/StudentUploadRequirements'
 import StudentProfile from './components/StudentProfile'
+import Calendar from './components/Calendar'
 
 const App = () => {
   const location = useLocation();
@@ -51,6 +53,17 @@ const App = () => {
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
             <Route path='/StudentProfile' element={<StudentProfile />} />
+            <Route
+            path="/SchoolApplication"
+            element={
+              <Protected isSignedIn={localStorage.getItem("default-token")}>
+                <SchoolApplication />
+              </Protected>
+            }
+          />
+            <Route path='/StudentUploadRequirements' element={<StudentUploadRequirements />} />
+            <Route path='/StudentProfile' element={<StudentProfile />} />
+            <Route path='/Calendar' element={<Calendar />} />
             <Route
             path="/SchoolApplication"
             element={

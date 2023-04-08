@@ -53,10 +53,8 @@ const categories = [
     jobs: "12 Jobs Available"
   },
 ]
+
 const IndexHero = () => {
-
-
-
   return (
     <div >
       <div className='bg-heroPattern bg-cover'>
