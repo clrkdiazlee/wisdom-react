@@ -11,12 +11,21 @@ import ForgotPassword from "./components/ForgotPassword";
 import ConfirmPassword from "./components/ConfirmPassword";
 import About from "./Routes/About";
 import SchoolApplication from "./components/SchoolApplication";
+import SchoolTransaction from './components/SchoolTransaction'
+import SchoolDashboard from './components/SchoolDashboard'
+import FacilitatorStudentLogs from './components/FacilitatorStudentLogs'
+import FacilitatorStudentLogs2 from './components/FacilitatorStudentLogs2'
+import FacilitatorStudentTask from './components/FacilitatorStudentTask'
+import HRStudentApplicantsv2 from './components/HRStudentApplicantsv2'
+import AdminDashboard from './components/AdminDashboard'
+import AdminEditAccRole from './components/AdminEditAccRole'
 import Protected from "./components/Protected";
 import StudentUploadRequirements from "./components/StudentUploadRequirements";
 import StudentProfile from "./components/StudentProfile";
 import Calendar from "./components/Calendar";
 import SchoolAddStudent from "./components/SchoolAddStudent";
 import SchoolEditProfile from "./components/SchoolEditProfile";
+
 
 
 const App = () => {
@@ -37,6 +46,14 @@ const App = () => {
         <Route path="/ConfirmPassword" element={<ConfirmPassword />} />
         <Route path="/About" element={<About />} />
         <Route path="/StudentProfile" element={<StudentProfile />} />
+            <Route path='/AdminDashboard' element={<AdminDashboard />} />
+            <Route path='/AdminEditAccRole' element={<AdminEditAccRole />} />
+            <Route path='/FacilitatorStudentLogs' element={<FacilitatorStudentLogs />} />
+            <Route path='/FacilitatorStudentLogs2' element={<FacilitatorStudentLogs2 />} />
+            <Route path='/FacilitatorStudentTask' element={<FacilitatorStudentTask />} />
+            <Route path='/HRStudentApplicantsv2' element={<HRStudentApplicantsv2 />} />
+            <Route path='/SchoolTransaction' element={<SchoolTransaction />} />
+            <Route path='/SchoolDashboard' element={<SchoolDashboard />} />
         <Route
           path="/SchoolApplication"
           element={
@@ -58,6 +75,14 @@ const App = () => {
             </Protected>
           }
         />
+            <Route path='/AdminDashboard' element={<AdminDashboard />} />
+            <Route path='/AdminEditAccRole' element={<AdminEditAccRole />} />
+            <Route path='/FacilitatorStudentLogs' element={<FacilitatorStudentLogs />} />
+            <Route path='/FacilitatorStudentLogs2' element={<FacilitatorStudentLogs2 />} />
+            <Route path='/FacilitatorStudentTask' element={<FacilitatorStudentTask />} />
+            <Route path='/HRStudentApplicantsv2' element={<HRStudentApplicantsv2 />} />
+            <Route path='/SchoolTransaction' element={<SchoolTransaction />} />
+            <Route path='/SchoolDashboard' element={<SchoolDashboard />} />
         <Route
           path="/Calendar"
           element={
