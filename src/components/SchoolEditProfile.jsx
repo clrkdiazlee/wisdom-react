@@ -7,11 +7,11 @@ const submitProfile = () => {
 
   axios
   .post(`/school-information-edit`, {
-
+    
   })
 }
 
-const StudentProfile = () => {
+const SchoolEditProfile = () => {
   return (
     <div>
       <div className="bg-studentHeader w-full h-40">
@@ -19,9 +19,9 @@ const StudentProfile = () => {
           Edit Profile
         </div>
       </div>
-      <div className="flex justify-center items-start">
+      <div className="flex pl-11 -mt-20 justify-center items-start">
         <div>
-          <div className="w-80 h-80 pl-11 -mt-20">
+          <div className="w-80 h-80">
             <img src="/images/testimonies/russel.svg"></img>
           </div>
           <button
@@ -130,4 +130,4 @@ const StudentProfile = () => {
   );
 };
 
-export default StudentProfile;
+export default SchoolEditProfile;

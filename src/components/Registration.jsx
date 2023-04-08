@@ -53,7 +53,7 @@ const Registration = () => {
           })
           .then((_) => {
             axios
-              .post("/users.roles", {
+              .post("/store-registration-role", {
                 role_id: 3,
                 user_id: res.data.id
               })
