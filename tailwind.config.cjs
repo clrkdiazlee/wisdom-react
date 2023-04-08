@@ -10,6 +10,7 @@ module.exports = {
         'heroPattern': "url('/images/heroPattern.svg')",
         'aboutBg': "url('/images/aboutBg.svg')",
         'aboutBgWhite': "url('/images/aboutBgWhite.svg')",
+        'studentHeader': "url('/images/student/header.svg')",
       },
       colors: {
         buttonBlue: '#0017EB',

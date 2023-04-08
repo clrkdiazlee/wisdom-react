@@ -1,11 +1,29 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Registration = () => {
+  const [schoolName, setSchoolName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [studentAddress, setStudentAddress] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [city, setCity] = useState("");
+  const [province, setProvince] = useState("");
+  const navigate = useNavigate();
+
   const submitForm = (e) => {
+    
     e.preventDefault();
-    if (!schoolName || !email || !password || !confirmPassword || !studentAddress || !contactNumber) {
+    if (
+      !schoolName ||
+      !email ||
+      !password ||
+      !confirmPassword ||
+      !studentAddress ||
+      !contactNumber
+    ) {
       alert("Please fill all the required fields");
     } else {
       // Do something with the form data
@@ -14,7 +32,7 @@ const Registration = () => {
 
     if (password !== confirmPassword) {
       alert("Passwords do not match");
-      return
+      return;
     }
 
     axios
@@ -33,26 +51,29 @@ const Registration = () => {
             province: province,
             user_id: res.data.id
           })
-          .then((res) => {
-            console.log(res.data)
+          .then((_) => {
+            axios
+              .post("/users.roles", {
+                role_id: 3,
+                user_id: res.data.id
+              })
+              .then((res2) => {
+                console.log(res2.data);
+                navigate("/Login");
+              })
+              .catch((error) => {
+                console.log(error);
+              });
           })
           .catch((error) => {
             console.log(error);
-          })
-        })
-        .catch((error) => {
-          console.log(error);
+          });
       })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const [schoolName, setSchoolName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [studentAddress, setStudentAddress] = useState("");
-  const [contactNumber, setContactNumber] = useState("");
-  const [city, setCity] = useState("");
-  const [province, setProvince] = useState("");
 
   return (
     <div className="flex flex-col lg:flex-row h-screen z-0">
@@ -62,9 +83,10 @@ const Registration = () => {
       ></div>
       <div className="bg-white flex justify-center items-center flex-1 pt-3">
         <form className="w-full px-4" onSubmit={submitForm}>
-          <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Create Account</h1>
+          <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">
+            Create Account
+          </h1>
           <div className="px-8 pb-8">
-
             {/* SCHOOL NAME */}
             <div className="mb-4">
               <label
@@ -102,7 +124,6 @@ const Registration = () => {
                 required
               />
             </div>
-
 
             {/* SCHOOL ADDRESS */}
             <div className="mb-4">
@@ -160,7 +181,6 @@ const Registration = () => {
               />
             </div>
 
-
             {/* 2 COLUMN */}
             <div className="mb-4 flex">
               {/* PASSWORD */}
@@ -200,7 +220,6 @@ const Registration = () => {
                   required
                 />
               </div>
-
             </div>
 
             {/* 2 COLUMN */}
@@ -215,7 +234,10 @@ const Registration = () => {
                 </label>
                 <select
                   className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  value={city} onChange={(e) => setCity(e.target.value)} required>
+                  value={city}
+                  onChange={(e) => setCity(e.target.value)}
+                  required
+                >
                   <option value="">Select City</option>
                   <option value="Manila">Manila</option>
                   <option value="Quezon City">Quezon City</option>
@@ -235,7 +257,8 @@ const Registration = () => {
                 <select
                   className="font-poppins text-xs h-12 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   value={province}
-                  onChange={(e) => setProvince(e.target.value)} required
+                  onChange={(e) => setProvince(e.target.value)}
+                  required
                 >
                   <option value="">Select Province</option>
                   <option value="Metro Manila">Metro Manila</option>
@@ -243,12 +266,7 @@ const Registration = () => {
                   <option value="Davao del Sur">Davao del Sur</option>
                 </select>
               </div>
-
             </div>
-
-
-
-
 
             {/* BUTTON */}
             <div className="flex items-center justify-between">
@@ -258,9 +276,8 @@ const Registration = () => {
               >
                 Register
               </button>
-
             </div>
-            <hr className=' my-3'></hr>
+            <hr className=" my-3"></hr>
 
             <Link to="/Login">
               <p className="text-xs font-light text-center text-gray-700 font-poppins">
