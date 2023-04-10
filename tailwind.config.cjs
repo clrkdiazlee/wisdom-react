@@ -17,6 +17,7 @@ module.exports = {
         buttonGray: '#BDCBD3',
         headingBlue: '#0017EB',
         subGray: '#676767',
+        calendarBg: '#9FCFFF'
       },
     },
     fontFamily: {

@@ -90,13 +90,13 @@ export default function Calendar() {
   )
 
   return (
-    <div className="pt-16 pb-16 font-poppins">
+    <div className="pt-8 pb-36 md:px-[15rem] font-poppins">
       <div>
         <div className="md:grid md:grid-cols-8">
-          <div className="md:pr-14 md:col-span-6 px-52">
-            <div className="flex pb-14">
-              <h2 className="flex-auto font-semibold text-gray-900 text-3xl">
-                {format(firstDayCurrentMonth, 'MMMM yyyy')}
+          <div className=" md:col-span-6 pl-28">
+            <div className="flex pb-2">
+              <h2 className="flex-auto font-semibold text-gray-900 text-xl">
+                <p className='font-light text-lg'>Calendar</p>{format(firstDayCurrentMonth, 'MMMM yyyy')}
               </h2>
               <button
                 type="button"
@@ -115,7 +115,7 @@ export default function Calendar() {
                 <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
-            <div className="grid grid-cols-7 gap-7 text-3xl leading-6 text-blue-500 text-center pb-8">
+            <div className="grid grid-cols-7 gap-7 text-md leading-6 text-blue-500 text-center pb-2">
               <div>S</div>
               <div>M</div>
               <div>T</div>
@@ -124,13 +124,13 @@ export default function Calendar() {
               <div>F</div>
               <div>S</div>
             </div>
-            <div className="grid grid-cols-7 gap-7 text-3xl">
+            <div className="grid grid-cols-7 gap-7 text-md px:">
               {days.map((day, dayIdx) => (
                 <button onClick={() => setSelectedDay(day)}
                   key={day.toString()}
                   className={classNames(
                     dayIdx === 0 && colStartClasses[getDay(day)],
-                    `h-40 w-40 shadow-[0px_10px_16px_-2px_#00000024] rounded-3xl relative ${classNames(
+                    `h-[3.7rem] w-[3.3rem] shadow-[0px_6px_10px_-1px_#00000024] rounded-2xl relative ${classNames(
                       isEqual(day, selectedDay) && 'text-white',
                       !isEqual(day, selectedDay) &&
                         isToday(day) &&
@@ -153,7 +153,7 @@ export default function Calendar() {
                     )}`
                   )}
                 >
-                  <div className='flex justify-end items-end h-full pr-5 pb-3'>
+                  <div className='flex justify-end items-end h-full pr-2 pb-1'>
                   <div>
                   <div>
                     <time dateTime={format(day, 'yyyy-MM-dd')}>
@@ -173,7 +173,7 @@ export default function Calendar() {
               ))}
             </div>
           </div>
-          <section className="mt-12 md:mt-0 md:pl-14">
+          <section className="mt-12 md:mt-0 md:pl-14 md:col-span-2">
             <h2 className="font-semibold text-gray-900">
               Schedule for{' '}
               <time dateTime={format(selectedDay, 'yyyy-MM-dd')}>
