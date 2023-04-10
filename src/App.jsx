@@ -23,6 +23,7 @@ import Protected from "./components/Protected";
 import StudentUploadRequirements from "./components/StudentUploadRequirements";
 import StudentProfile from "./components/StudentProfile";
 import Calendar from "./components/Calendar";
+import CalendarDailyLog from "./components/CalendarDailyLog";
 import SchoolAddStudent from "./components/SchoolAddStudent";
 import SchoolEditProfile from "./components/SchoolEditProfile";
 import StudentUploadRequirementsMOA from "./components/StudentUploadRequirementsMOA";
@@ -121,6 +122,14 @@ const App = () => {
           element={
             <Protected isSignedIn={localStorage.getItem("default-token")}>
               <Calendar />
+            </Protected>
+          }
+        />
+        <Route
+          path="/DailyLog"
+          element={
+            <Protected isSignedIn={localStorage.getItem("default-token")}>
+              <CalendarDailyLog />
             </Protected>
           }
         />
