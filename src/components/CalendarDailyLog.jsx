@@ -175,7 +175,7 @@ export default function Calendar() {
           </div>
           <section className="mt-12 md:mt-0 md:pl-14 md:col-span-2">
             <h2 className="font-semibold text-gray-900">
-              Tasks for{' '}
+              Log for {' '}
               <time dateTime={format(selectedDay, 'yyyy-MM-dd')}>
                 {format(selectedDay, 'MMM dd, yyy')}
               </time>
