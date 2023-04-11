@@ -11,6 +11,7 @@ import ConfirmPassword from './components/ConfirmPassword'
 import About from './Routes/About'
 import SchoolApplication from './components/SchoolApplication'
 import SchoolAddStudent from './components/SchoolAddStudent'
+import IndivCategory from './components/IndivCategory'
 
 const App = () => {
   const location = useLocation();
@@ -44,8 +45,8 @@ const App = () => {
             <Route path='/ConfirmPassword' element={<ConfirmPassword />} />
             <Route path='/About' element={<About />} />
 
+            <Route path='/indiv-category' element={<IndivCategory/>} />
             <Route path='/add-student' element={<SchoolAddStudent />} />
-
           </Routes>
           <Footer />
         </>
