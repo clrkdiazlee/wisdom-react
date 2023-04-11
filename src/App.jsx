@@ -26,6 +26,7 @@ import Calendar from "./components/Calendar";
 import SchoolAddStudent from "./components/SchoolAddStudent";
 import SchoolEditProfile from "./components/SchoolEditProfile";
 import StudentUploadRequirementsMOA from "./components/StudentUploadRequirementsMOA";
+import IndivCategory from './components/IndivCategory'
 
 const App = () => {
   const location = useLocation();
@@ -58,6 +59,7 @@ const App = () => {
           element={<FacilitatorStudentLogs />}
         />
         <Route
+            <Route path='/indiv-category' element={<IndivCategory/>} />
           path="/FacilitatorStudentLogs2"
           element={<FacilitatorStudentLogs2 />}
         />
@@ -124,8 +126,7 @@ const App = () => {
             </Protected>
           }
         />
-        <Route path="/add-student" element={<SchoolAddStudent />} />
-      </Routes>
+        <Route path="/add-student" element={<SchoolAddStudent />} />      </Routes>
       <Footer />
     </div>
   );
