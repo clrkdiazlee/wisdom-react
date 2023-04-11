@@ -24,7 +24,6 @@ import StudentUploadRequirements from "./components/StudentUploadRequirements";
 import StudentProfile from "./components/StudentProfile";
 import Calendar from "./components/Calendar";
 import CalendarDailyLog from "./components/CalendarDailyLog";
-import CalendarDailyLog from "./components/CalendarDailyLog";
 import SchoolAddStudent from "./components/SchoolAddStudent";
 import SchoolEditProfile from "./components/SchoolEditProfile";
 import StudentUploadRequirementsMOA from "./components/StudentUploadRequirementsMOA";
