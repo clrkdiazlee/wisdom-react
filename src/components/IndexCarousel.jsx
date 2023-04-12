@@ -37,7 +37,7 @@ const Test = () => {
             className="carousel-container float-left relative flex overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0">
             {data.resources.map((resource, index) => {
               return (
-              <SwiperSlide key={index}>  
+              <SwiperSlide key={index} className='!w-auto'>  
                 <div
                   className="carousel-item text-center relative w-40 h-80 snap-start 
                   flex-initial -skew-x-[20deg]
