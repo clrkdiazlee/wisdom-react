@@ -11,7 +11,7 @@ const StudentUploadRequirementsMOA = () => {
         <div className="font-medium">Kindly submit the Memorandum of Agreement in .PDF format.</div>
         <div className="outline-dashed outline-1 outline-buttonBlue rounded-xl my-12">
           <div className="bg-buttonBlue py-10 rounded-xl bg-opacity-5 text-opacity-100 text-center justify-center items-center">
-            <div className="w-full h-full flex flex-col justify-center text-[1.5rem] font-poppinsLight font-medium items-center">
+            <div className="w-full h-full flex flex-col justify-center text-[1.5rem] font-poppins font-medium items-center">
               <img
                 src="/images/student/studentUploadIcon.svg"
                 alt=""

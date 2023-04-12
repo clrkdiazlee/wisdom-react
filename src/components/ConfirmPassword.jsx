@@ -1,8 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ConfirmPassword = () => {
 
+  const { token, email} = useParams()
+  const navigate = useNavigate();
   const [newPassword, setnewPassword] = useState("");
   const [confirmNewPassword, setconfirmNewPassword] = useState("");
 
@@ -17,14 +20,27 @@ const ConfirmPassword = () => {
       // Do something with the form data
       console.log("Form submitted");
     }
+    axios
+    .post(`/reset_password`, {
+      email: email,
+      token: token,
+      password: newPassword,
+      password_confirmation: confirmNewPassword
+    })
+    .then((res) => {
+      navigate('/Login')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   };
+
   return (
     <div className="flex flex-col lg:flex-row bg-gray-100 h-screen">
       <div
-        className="bg-cover bg-center h-screen lg:h-auto lg:w-1/2"
-        style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
+        className="bg-logoBg h-screen lg:h-auto lg:w-full"
       ></div>
-      <div className="bg-white flex justify-center items-center flex-1 pt-3">
+      <div className="bg-white flex justify-center items-center w-full pt-3">
         <form className="w-full px-24" onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Reset Account Password</h1>
           <div className="px-8 pb-8">

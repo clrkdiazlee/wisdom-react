@@ -76,12 +76,11 @@ const Registration = () => {
 
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen z-0">
+    <div className="flex flex-col lg:flex-row h-screen">
       <div
-        className="bg-cover bg-center h-screen lg:h-auto lg:w-1/2"
-        style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
+        className="bg-logoBg lg:w-full h-screen lg:h-auto "
       ></div>
-      <div className="bg-white flex justify-center items-center flex-1 pt-3">
+      <div className="flex justify-center items-center w-full -mt-14">
         <form className="w-full px-4" onSubmit={submitForm}>
           <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">
             Create Account

@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="bg-[#1B3996] font-poppinsLight">
+    <div className="bg-[#1B3996] font-poppins">
       <div className="mx-auto w-full container p-4 sm:p-6">
         <div className="md:flex md:justify-between gap-9 sm:gap-6 py-7">
           <div className="text-gray-300 px-5">
@@ -102,7 +102,7 @@ function Footer() {
       </div>
 
       {/* COPYRIGHT */}
-      <div className="bg-[#122664] w-full text-center text-white font-poppinsLight text-sm py-1">
+      <div className="bg-[#122664] w-full text-center text-white font-poppins text-sm py-1">
         © 2023 Wisdom. All Rights Reserved.
       </div>    
     </div>

@@ -10,7 +10,7 @@ const StudentUploadRequirements = () => {
         <div className="font-bold mt-16 text-[3rem]">Upload Requirements</div>
         <div className="outline-dashed outline-1 outline-buttonBlue rounded-xl my-12">
           <div className="bg-buttonBlue h-[30rem] rounded-xl bg-opacity-5 text-opacity-100 text-center justify-center items-center">
-            <div className="w-full h-full flex flex-col justify-center text-[1.5rem] font-poppinsLight font-medium items-center">
+            <div className="w-full h-full flex flex-col justify-center text-[1.5rem] font-poppins font-medium items-center">
               <img
                 src="/images/student/studentUploadIcon.svg"
                 alt=""

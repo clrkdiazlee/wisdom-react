@@ -70,11 +70,11 @@ const Test = () => {
                     {/* TITLE */}
                     <div className='h-full w-96 block absolute top-0 left-0 
                     hover:w-full transition-opacity opacity-0 hover:opacity-100 bg-[#1B3996]/75 z-10'>
-                      <h3 className="skew-x-[20deg] font-poppinslight font-semibold text-white py-5 px-3 mx-auto text-2xl">
+                      <h3 className="skew-x-[20deg] font-poppins font-semibold text-white py-5 px-3 mx-auto text-2xl">
                       {resource.title}
                       </h3>
                       <div className='max-w-96 max-h-60 break-normal whitespace-normal'>
-                        <h3 className='max-w-80 max-h-60 skew-x-[20deg] font-poppinslight py-1 px-14 mx-auto text-white'>
+                        <h3 className='max-w-80 max-h-60 skew-x-[20deg] font-poppins py-1 px-14 mx-auto text-white'>
                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero nulla, euismod sed efficitur vitae, mollis in dolor. Proin sit amet tortor congue, ultrices nisi sit amet, suscipit odio. Proin ac turpis vitae dui dapibus varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
                         </h3>
                       </div>
