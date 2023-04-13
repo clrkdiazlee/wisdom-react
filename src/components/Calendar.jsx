@@ -124,13 +124,13 @@ export default function Calendar() {
               <div>F</div>
               <div>S</div>
             </div>
-            <div className="grid grid-cols-7 gap-7 text-md md:px-16">
+            <div className="grid grid-cols-7 gap-7 text-md md:px-12">
               {days.map((day, dayIdx) => (
                 <button onClick={() => setSelectedDay(day)}
                   key={day.toString()}
                   className={classNames(
                     dayIdx === 0 && colStartClasses[getDay(day)],
-                    `h-[3.7rem] w-[3.3rem] shadow-[0px_6px_10px_-1px_#00000024] rounded-2xl relative ${classNames(
+                    `h-[4.2rem] w-[3.7rem] shadow-[0px_6px_10px_-1px_#00000024] rounded-2xl relative ${classNames(
                       isEqual(day, selectedDay) && 'text-white',
                       !isEqual(day, selectedDay) &&
                         isToday(day) &&

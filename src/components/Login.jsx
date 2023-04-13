@@ -33,12 +33,9 @@ const Login = () => {
     }
 
   return (
-    <div className="flex flex-col lg:flex-row bg-gray-100 h-screen">
-      <div
-        className="bg-cover bg-center h-screen lg:h-auto lg:w-1/2"
-        style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
-      ></div>
-      <div className="bg-white flex justify-center items-center flex-1 pt-3">
+    <div className="flex flex-col lg:flex-row h-screen">
+      <div className="bg-logoBg h-screen lg:h-auto lg:w-full"></div>
+      <div className="bg-white flex w-full justify-center items-center pt-3">
         <form className="w-full px-24" onSubmit={handleSubmit}>
           <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">Login</h1>
           <div className="px-8 pb-8">

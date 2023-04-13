@@ -50,91 +50,49 @@ const App = () => {
         <Route path="/Registration" element={<Registration />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/ForgotPassword" element={<ForgotPassword />} />
-        <Route path="/ConfirmPassword" element={<ConfirmPassword />} />
+        <Route path="/ConfirmPassword/:token/:email" element={<ConfirmPassword />} />
         <Route path="/About" element={<About />} />
         <Route path="/StudentProfile" element={<StudentProfile />} />
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
         <Route path="/AdminEditAccRole" element={<AdminEditAccRole />} />
-        <Route
-          path="/FacilitatorStudentLogs"
-          element={<FacilitatorStudentLogs />}
-        />
-        <Route
-          path="/FacilitatorStudentLogs2"
-          element={<FacilitatorStudentLogs2 />}
-        />
+        <Route path="/FacilitatorStudentLogs" element={<FacilitatorStudentLogs />}/>
+        <Route path="/FacilitatorStudentLogs2" element={<FacilitatorStudentLogs2 />}/>
         <Route path="/indiv-category" element={<IndivCategory />} />
-        <Route
-          path="/FacilitatorStudentTask"
-          element={<FacilitatorStudentTask />}
-        />
-        <Route
-          path="/HRStudentApplicantsv2"
-          element={<HRStudentApplicantsv2 />}
-        />
+        <Route path="/FacilitatorStudentTask" element={<FacilitatorStudentTask />}/>
+        <Route path="/HRStudentApplicantsv2" element={<HRStudentApplicantsv2 />}/>
         <Route path="/SchoolTransaction" element={<SchoolTransaction />} />
         <Route path="/SchoolDashboard" element={<SchoolDashboard />} />
-        <Route
-          path="/SchoolApplication"
-          element={
+        <Route path="/SchoolApplication" element={
             <Protected isSignedIn={localStorage.getItem("default-token")}>
               <SchoolApplication />
             </Protected>
-          }
-        />
-        <Route
-          path="/StudentUploadRequirements"
-          element={<StudentUploadRequirements />}
-        />
-        <Route
-          path="/StudentUploadRequirementsMOA"
-          element={<StudentUploadRequirementsMOA />}
-        />
+          }/>
+        <Route path="/StudentUploadRequirements" element={<StudentUploadRequirements />}/>
+        <Route path="/StudentUploadRequirementsMOA" element={<StudentUploadRequirementsMOA />}/>
         <Route path="/StudentProfile" element={<StudentProfile />} />
-        <Route
-          path="/SchoolEditProfile"
-          element={
+        <Route path="/SchoolEditProfile" element={
             <Protected isSignedIn={localStorage.getItem("default-token")}>
               <SchoolEditProfile />
             </Protected>
-          }
-        />
+          }/>
         <Route path="/AdminDashboard" element={<AdminDashboard />} />
         <Route path="/AdminEditAccRole" element={<AdminEditAccRole />} />
-        <Route
-          path="/FacilitatorStudentLogs"
-          element={<FacilitatorStudentLogs />}
-        />
-        <Route
-          path="/FacilitatorStudentLogs2"
-          element={<FacilitatorStudentLogs2 />}
-        />
-        <Route
-          path="/FacilitatorStudentTask"
-          element={<FacilitatorStudentTask />}
-        />
-        <Route
-          path="/HRStudentApplicantsv2"
-          element={<HRStudentApplicantsv2 />}
-        />
+        <Route path="/FacilitatorStudentLogs" element={<FacilitatorStudentLogs />}/>
+        <Route path="/FacilitatorStudentLogs2" element={<FacilitatorStudentLogs2 />}/>
+        <Route path="/FacilitatorStudentTask" element={<FacilitatorStudentTask />}/>
+        <Route path="/HRStudentApplicantsv2" element={<HRStudentApplicantsv2 />}/>
         <Route path="/SchoolTransaction" element={<SchoolTransaction />} />
         <Route path="/SchoolDashboard" element={<SchoolDashboard />} />
-        <Route
-          path="/Calendar"
-          element={
+        <Route path="/Calendar" element={
             <Protected isSignedIn={localStorage.getItem("default-token")}>
               <Calendar />
             </Protected>
-          }
-        />
-        <Route
-          path="/DailyLog"
-          element={
+          }/>
+        <Route path="/DailyLog" element={
             <Protected isSignedIn={localStorage.getItem("default-token")}>
               <CalendarDailyLog />
             </Protected>
-          }
-        />
+          }/>
         <Route path="/add-student" element={<SchoolAddStudent />} />{" "}
       </Routes>
       <Footer />

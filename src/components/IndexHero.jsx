@@ -63,7 +63,7 @@ const IndexHero = () => {
             <div className='font-poppins font-bold text-[5rem] text-center px-[20rem] leading-tight'>
               Find the internship of your <span className='text-headingBlue'>Dreams</span>
             </div>
-            <div className='font-poppinsLight font-thin text-center px-[30rem] mt-8'>
+            <div className='font-poppins font-thin text-center px-[30rem] mt-8'>
               Discover your ideal internship and work with professionals. Explore opportunities that fit your goals today!
             </div>
             <div className='mt-14'>

@@ -25,10 +25,8 @@ const Registration = () => {
       !contactNumber
     ) {
       alert("Please fill all the required fields");
-    } else {
-      // Do something with the form data
-      console.log("Form submitted");
-    }
+      return
+    } 
 
     if (password !== confirmPassword) {
       alert("Passwords do not match");
@@ -51,19 +49,8 @@ const Registration = () => {
             province: province,
             user_id: res.data.id
           })
-          .then((_) => {
-            axios
-              .post("/store-registration-role", {
-                role_id: 3,
-                user_id: res.data.id
-              })
-              .then((res2) => {
-                console.log(res2.data);
-                navigate("/Login");
-              })
-              .catch((error) => {
-                console.log(error);
-              });
+          .then((res2) => {
+            navigate("/Login");
           })
           .catch((error) => {
             console.log(error);
@@ -76,12 +63,11 @@ const Registration = () => {
 
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen z-0">
+    <div className="flex flex-col lg:flex-row h-screen">
       <div
-        className="bg-cover bg-center h-screen lg:h-auto lg:w-1/2"
-        style={{ backgroundImage: "url('/images/logo-blue.jpg')" }}
+        className="bg-logoBg lg:w-full h-screen lg:h-auto "
       ></div>
-      <div className="bg-white flex justify-center items-center flex-1 pt-3">
+      <div className="flex justify-center items-center w-full -mt-14">
         <form className="w-full px-4" onSubmit={submitForm}>
           <h1 className="text-2xl font-bold font-poppins text-buttonBlue mb-6 flex justify-center items-center">
             Create Account

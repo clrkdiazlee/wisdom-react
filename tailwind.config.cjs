@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
   ],
   theme: {
     extend: {
@@ -11,6 +12,7 @@ module.exports = {
         'aboutBg': "url('/images/aboutBg.svg')",
         'aboutBgWhite': "url('/images/aboutBgWhite.svg')",
         'studentHeader': "url('/images/student/header.svg')",
+        'logoBg': "url('/images/logoBg.svg')"
       },
       colors: {
         buttonBlue: '#0017EB',
@@ -22,7 +24,6 @@ module.exports = {
     },
     fontFamily: {
       poppins: ['Poppins', 'sans-serif'],
-      poppinsLight: ['Poppins', 'sans-serif']
     },
     variants: {
       width: ["responsive", "hover", "focus"],
@@ -31,5 +32,7 @@ module.exports = {
     },
 
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
