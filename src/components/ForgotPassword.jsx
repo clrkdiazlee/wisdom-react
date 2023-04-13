@@ -76,7 +76,7 @@ const ForgotPassword = () => {
                     Continue
                   </button>
                   <button
-                    className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline hidden"
+                    data-modal-target="defaultModal" data-modal-toggle="defaultModal" className="font-poppins text-xs h-12 bg-buttonBlue hover:bg-blue-700 text-white py-2 px-4 w-full rounded-full focus:outline-none focus:shadow-outline hidden"
                     type="submit"
                     >
                     Continue

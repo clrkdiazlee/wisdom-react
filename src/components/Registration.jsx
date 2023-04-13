@@ -25,10 +25,8 @@ const Registration = () => {
       !contactNumber
     ) {
       alert("Please fill all the required fields");
-    } else {
-      // Do something with the form data
-      console.log("Form submitted");
-    }
+      return
+    } 
 
     if (password !== confirmPassword) {
       alert("Passwords do not match");
@@ -51,19 +49,8 @@ const Registration = () => {
             province: province,
             user_id: res.data.id
           })
-          .then((_) => {
-            axios
-              .post("/store-registration-role", {
-                role_id: 3,
-                user_id: res.data.id
-              })
-              .then((res2) => {
-                console.log(res2.data);
-                navigate("/Login");
-              })
-              .catch((error) => {
-                console.log(error);
-              });
+          .then((res2) => {
+            navigate("/Login");
           })
           .catch((error) => {
             console.log(error);
