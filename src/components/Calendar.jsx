@@ -16,6 +16,7 @@ import {
   startOfToday,
 } from 'date-fns'
 import { Fragment, useState } from 'react'
+import axios from "axios";
 
 const tasks = [
   {
@@ -65,6 +66,24 @@ function classNames(...classes) {
 }
 
 export default function Calendar() {
+
+  const [addTask, setTask] = useState("");
+
+  const newTask = (e) => {
+    e.preventDefault();
+
+    axios
+      .post(`/daily-task/{id}`, {
+        task: addTask
+      })
+      .then((res) => {
+        console.log(res)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   let today = startOfToday()
   let [selectedDay, setSelectedDay] = useState(today)
   let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'))
@@ -92,8 +111,8 @@ export default function Calendar() {
   return (
     <div className="pt-8 pb-36 md:px-[15rem] font-poppins">
       <div>
-        <div className="md:grid md:grid-cols-8">
-          <div className=" md:col-span-6 pl-28">
+        <div className="md:grid md:grid-cols-9">
+          <div className="md:col-span-6 pr-6">
             <div className="flex pb-2">
               <h2 className="flex-auto font-semibold text-gray-900 text-xl">
                 <p className='font-light text-lg'>Calendar</p>{format(firstDayCurrentMonth, 'MMMM yyyy')}
@@ -115,7 +134,7 @@ export default function Calendar() {
                 <ChevronRightIcon className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
-            <div className="grid grid-cols-7 gap-7 text-md leading-6 text-blue-500 text-center pb-2 px-[3.7rem]">
+            <div className="grid grid-cols-7 gap-16 text-md leading-6 text-blue-500 text-center pb-2 px-[3.7rem]">
               <div>S</div>
               <div>M</div>
               <div>T</div>
@@ -133,62 +152,138 @@ export default function Calendar() {
                     `h-[4.2rem] w-[3.7rem] shadow-[0px_6px_10px_-1px_#00000024] rounded-2xl relative ${classNames(
                       isEqual(day, selectedDay) && 'text-white',
                       !isEqual(day, selectedDay) &&
-                        isToday(day) &&
-                        'text-blue-500',
+                      isToday(day) &&
+                      'text-blue-500',
                       !isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-900',
+                      !isToday(day) &&
+                      isSameMonth(day, firstDayCurrentMonth) &&
+                      'text-gray-900',
                       !isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        !isSameMonth(day, firstDayCurrentMonth) &&
-                        'text-gray-400',
+                      !isToday(day) &&
+                      !isSameMonth(day, firstDayCurrentMonth) &&
+                      'text-gray-400',
                       isEqual(day, selectedDay) && isToday(day) && 'bg-blue-400',
                       isEqual(day, selectedDay) &&
-                        !isToday(day) &&
-                        'bg-calendarBg',
+                      !isToday(day) &&
+                      'bg-calendarBg',
                       !isEqual(day, selectedDay) && 'hover:bg-gray-200',
                       (isEqual(day, selectedDay) || isToday(day)) &&
-                        'font-semibold',
+                      'font-semibold',
                     )}`
                   )}
                 >
                   <div className='flex justify-end items-end h-full pr-2 pb-1'>
-                  <div>
-                  <div>
-                    <time dateTime={format(day, 'yyyy-MM-dd')}>
-                      {format(day, 'd')}
-                    </time>
-                  </div>
-                  </div>
+                    <div>
+                      <div>
+                        <time dateTime={format(day, 'yyyy-MM-dd')}>
+                          {format(day, 'd')}
+                        </time>
+                      </div>
+                    </div>
 
                     {tasks.some((task) =>
                       isSameDay(parseISO(task.startDatetime), day)
                     ) && (
-                      <div className="absolute left-0 w-4 h-full bg-sky-300 bottom-0 rounded-l-3xl"></div>
-                    )}
+                        <div className="absolute left-0 w-4 h-full bg-sky-300 bottom-0 rounded-l-3xl"></div>
+                      )}
 
                   </div>
                 </button>
               ))}
             </div>
           </div>
-          <section className="mt-12 md:mt-0 md:pl-14 md:col-span-2">
-            <h2 className="font-semibold text-gray-900">
-              Tasks for{' '}
-              <time dateTime={format(selectedDay, 'yyyy-MM-dd')}>
-                {format(selectedDay, 'MMM dd, yyy')}
-              </time>
-            </h2>
-            <ol className="mt-4 space-y-1 text-sm leading-6 text-gray-500">
-              {selectedDayTasks.length > 0 ? (
-                selectedDayTasks.map((task) => (
-                  <Task task={task} key={task.id} />
-                ))
-              ) : (
-                <p>No tasks for today.</p>
-              )}
-            </ol>
+          <section className='flex flex-col mt-12 md:mt-0 md:col-span-3'>
+            <div>
+          <div className=" border-black rounded-xl shadow-[0px_3px_20px_-10px_#a0aeAA] px-5">
+            <div className='divide-y-[0.1rem] divide-slate-100'>
+              <div className='flex justify-between pt-4 items-center gap-4'>
+                <div className='text-2xl pb-2'>
+                  Tasks
+                </div>
+                <time className='text-sm font-light ' dateTime={format(selectedDay, 'yyyy-MM-dd')}>
+                  {format(selectedDay, 'MMM dd, yyy')}
+                </time>
+              </div>
+              <div>
+                <div>
+                  <ol className="pt-4 pb-10 space-y-1 text-sm leading-6 text-gray-500">
+                    {selectedDayTasks.length > 0 ? (
+                      selectedDayTasks.map((task) => (
+                        <Task task={task} key={task.id} />
+                      ))
+                    ) : (
+                      <p>No tasks for today.</p>
+                    )}
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <form onSubmit={newTask}>
+              <div className='pb-4'>
+                <input
+                  className="font-poppins text-xs h-10 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="addTask"
+                  type="text"
+                  placeholder="Enter your new task"
+                  value={addTask}
+                  onChange={(event) => setTask(event.target.value)}
+                  required
+                />
+              </div>
+              <div className='flex justify-center pb-4'>  
+                <button
+                  type="submit"
+                  className='rounded-full w-72 h-10 bg-buttonBlue text-white font-poppins !font-bold tracking-wider text-sm'>
+                  Add New Task
+                </button>
+              </div>
+            </form>
+          </div>
+          </div>
+
+          <div className='pt-5'>
+          <div className="border-black rounded-xl shadow-[0px_3px_20px_-10px_#a0aeAA] px-5">
+            <div>
+                <div className='pt-4 text-2xl pb-2'>
+                  Documentation
+                </div>
+
+              <div>
+                <div>
+                  <ol className="pt-4 pb-10 space-y-1 text-sm leading-6 text-gray-500">
+                    {selectedDayTasks.length > 0 ? (
+                      selectedDayTasks.map((task) => (
+                        <Task task={task} key={task.id} />
+                      ))
+                    ) : (
+                      <p>No tasks for today.</p>
+                    )}
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <form onSubmit={newTask}>
+              <div className='pb-4'>
+                <input
+                  className="font-poppins text-xs h-10 border rounded-full w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="addTask"
+                  type="text"
+                  placeholder="Enter your new task"
+                  value={addTask}
+                  onChange={(event) => setTask(event.target.value)}
+                  required
+                />
+              </div>
+              <div className='flex justify-center pb-4'>
+                <button
+                  type="submit"
+                  className='rounded-full w-72 h-10 bg-buttonBlue text-white font-poppins !font-bold tracking-wider text-sm'>
+                  Add New Task
+                </button>
+              </div>
+            </form>
+          </div>
+          </div>
           </section>
         </div>
       </div>
